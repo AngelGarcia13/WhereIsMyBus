@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta name="description" content="Cosulta Tu Médico">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <link rel='stylesheet' href='css/roboto.css'>
+    <link rel="stylesheet" href="lib/angular-material/angular-material.min.css" />
+    <link href="lib/angular-material/icon.css" rel="stylesheet" />
+    <link rel='stylesheet' href='css/custom.css'>
+</head>
+<body ng-app="MyApp" ng-cloak layout="column" ng-controller="MenuController as menu">
+
+    <md-toolbar layout="row">
+        <md-button class="menu" ng-click="menu.toggleList()">
+            <md-icon md-svg-icon="menu"></md-icon>
+        </md-button>
+        <h3>Where Is My Bus?</h3>
+    </md-toolbar>
+
+    <div class="container" layout="row" flex>
+        <md-sidenav ng-click="menu.toggleList()"
+                    md-component-id="left"
+                    class="md-whiteframe-4dp">
+
+            <md-list>
+                <md-list-item>
+                    <md-button ng-click="menu.goTo('/')">
+                        Mapa
+                    </md-button>
+                </md-list-item>
+                <md-list-item>
+                    <md-button ng-click="menu.goTo('/informacion')">
+                        Información
+                    </md-button>
+                </md-list-item>
+            </md-list>
+        </md-sidenav>
+
+        <div flex layout="column" >
+            <div ng-view flex layout="column"></div>
+        </div>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "XXXXXXX",
+        authDomain: "XXXXXXXXXXXX.firebaseapp.com",
+        databaseURL: "XXXXXXXXXXXXXXX.firebaseio.com",
+        storageBucket: ""
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqdgnzU1vnaRNCnoIcGJyt8hLRTzPbADU"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular/angular-route.min.js"></script>
+    <script src="lib/angular/angular-messages.js"></script>
+    <script src="lib/angular/angular-animate.min.js"></script>
+    <script src="lib/angular/angular-aria.min.js"></script>
+    <script src="lib/angular-material/angular-material.min.js"></script>
+    <script src="menu/menu.module.js"></script>
+    <script src="menu/menu.controller.js"></script>
+    <script src="mapa/mapa.module.js"></script>
+    <script src="mapa/mapa.service.js"></script>
+    <script src="mapa/mapa.controller.js"></script>
+    <script src="informacion/informacion.module.js"></script>
+    <script src="informacion/informacion.controller.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+</html>
