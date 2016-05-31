@@ -78,10 +78,15 @@
             });
             //Close the infoWindow when click on the map
             google.maps.event.addListener(map, "click", function(event) {
+                resetSelectedMarker();
                 infoWindow.close();
             });
         }
-
+        
+        function resetSelectedMarker() {
+            selectedMarker = null;
+        }
+        
         function removeMarkers() {
             /* Remove All Markers */
             // while(markers.length){
