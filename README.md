@@ -56,5 +56,8 @@ If you need help with the repo or you have any question, you can ask to Arturo m
 [android_tracker_repo]: <https://github.com/Amejia481/whereismybus_locationtracking>
 [web_app_repo]: <https://github.com/AngelGarcia13/WhereIsMyBus>
 [best_practice]: <https://github.com/johnpapa/angular-styleguide>
-
+[License]: <https://github.com/AngelGarcia13/WhereIsMyBus/blob/master/LICENSE.md>
 :sparkles: **happy coding and have fun** :sparkles:.
+
+### LICENSE
+This project is under the Attribution Assurance License (AAL). See the [License][License]
