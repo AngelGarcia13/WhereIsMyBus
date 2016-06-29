@@ -1,4 +1,4 @@
-Copyright (c) 2002 by: Angel Garcia and Arturo Mejía.
+Copyright (c) 2016 by: Angel Garcia and Arturo Mejía.
 WEARECODE: http://angelrenegarcia.com/ - http://www.arturomejiamarmol.com/
 "We are code"
 
